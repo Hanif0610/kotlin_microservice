@@ -8,7 +8,15 @@ import org.springframework.stereotype.Service
 //    override fun getHello(name: String) = "hello $name"
 //}
 
-@Service
+//@Service
+//class ExampleService : ServiceInterface {
+//
+//    @Value(value = "\${service.message.text}")
+//    private lateinit var text: String
+//
+//    override fun getHello(name: String) = "$text $name"
+//}
+
 class ExampleService : ServiceInterface {
 
     @Value(value = "\${service.message.text}")
