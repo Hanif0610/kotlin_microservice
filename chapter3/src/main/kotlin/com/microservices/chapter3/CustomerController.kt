@@ -8,5 +8,6 @@ import org.springframework.web.bind.annotation.RestController
 class CustomerController {
 
     @RequestMapping(value = ["/customer"], method = arrayOf(RequestMethod.GET))
-    fun getCustomer() = "hello from a controller"
+//    fun getCustomer() = "hello from a controller" //결과 : hello from a controller
+    fun getCustomer() = Customer(1, "Kotlin") //결과 : {"id":1, "name":"Kotlin"}
 }
