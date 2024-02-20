@@ -30,6 +30,6 @@ class CustomerController {
     //필터를 통한 반환
     @RequestMapping(value = ["/customers"], method = arrayOf(RequestMethod.GET))
     fun getCustomer(@RequestParam(required = false, defaultValue = "") nameFilter: String) = customers.filter {
-        it.value.name.contains(nameFilter)
+        it.value.name.contains(nameFilter, true)
     }.map(Map.Entry<Int, Customer>::value) //요청을 /customers?nameFilter=in 으로 할 때 key가 1, 2인 결과만 나옴
 }
